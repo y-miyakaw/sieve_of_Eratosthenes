@@ -28,7 +28,7 @@ func Sieve(max int) []int {
 
 	// エラトステネスの篩の走査を実行
 	// Perform the Sieve of Eratosthenes
-	for i := 2; i < sqrtMax; i++ {
+	for i := 2; i <= sqrtMax; i++ {
 		if isPrime[i] {
 			for j := i * i; j <= max; j += i {
 				isPrime[j] = false
